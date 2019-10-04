@@ -26,6 +26,8 @@ public class Etudiant {
 		etu.dateNaissance.jour = Integer.parseInt(args[3]);
 		etu.dateNaissance.mois = Integer.parseInt(args[4]);
 		etu.dateNaissance.annee = Integer.parseInt(args[5]);
+		System.out.println("Ca marche!");
+		
 	}
 
 }
