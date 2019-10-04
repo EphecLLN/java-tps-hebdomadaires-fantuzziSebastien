@@ -81,6 +81,19 @@ public class Calculatrice {
 	}
 
 
+	
+
+	/**
+	 * Renvoie une representation textuelle de la valmeur affichée sur la calculatrice
+	 */
+	@Override
+	public String toString() {
+		return "La calculatrice affiche la valeur " + getValeurCourante();
+	}
+
+	
+	
+	
 
 	/**
 	 * MÃ©thode main permettant de lancer un test rapide de la classe calculatrice.
@@ -88,7 +101,7 @@ public class Calculatrice {
 	 */
 	public static void main(String[] args) {
 		Calculatrice myCalc = new Calculatrice();
-		System.out.println(myCalc.getValeurCourante());
+		System.out.println(myCalc);
 		myCalc.ajoute(5);
 		myCalc.soustrait(2);
 		System.out.println(myCalc.valeurCourante);
