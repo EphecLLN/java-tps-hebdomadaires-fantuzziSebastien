@@ -13,6 +13,27 @@ public class Etudiant {
 	//Cette variable d'instance est du type Date, disponible dans le même package
 	Date dateNaissance;
 	
+	
+	
+	//constructeur
+	/**
+	 * @param nom
+	 * @param prenom
+	 * @param matricule
+	 * @param dateNaissance
+	 */
+	public Etudiant(String nom, String prenom, int matricule, Date dateNaissance) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.matricule = matricule;
+		this.dateNaissance = dateNaissance;
+	}
+
+
+
+
+
 	/*
 	 * Méthode main qui crée un étudiant et initialise les variables d'instance au départ de la ligne de commande
 	 * 

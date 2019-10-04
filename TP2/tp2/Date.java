@@ -12,6 +12,7 @@ package tp2;
  */
 public class Date {
 	
+
 	//variables d'instance
 	int jour;
 	int mois;
@@ -19,6 +20,21 @@ public class Date {
 	
 	
 	
+	//constructeur
+	/**
+	 * @param jour
+	 * @param mois
+	 * @param annee
+	 */
+	public Date(int jour, int mois, int annee) {
+		this.jour = jour;
+		this.mois = mois;
+		this.annee = annee;
+	}
+	
+	
+	
+	//methode
 	/**
 	 * La méthode main permet de tester la classe date en créant un objet 
 	 * au départ des arguments de la ligne de commande.  Trois arguments sont attendus, sous forme d'entiers : 
