@@ -11,7 +11,7 @@ public class Calculatrice {
 	private double valeurCourante; // Stocke la valeur affichÃ©e sur l'écran de la calculatrice
 
 
-
+//----------------------------------------------
 
 	//setters et getters
 	/**
@@ -29,11 +29,11 @@ public class Calculatrice {
 		this.valeurCourante = valeurCourante;
 	}
 
+//---------------------------------------------
 
 
 
-
-	//construct
+	//constructeur
 	/**
 	 * 
 	 */
@@ -52,6 +52,9 @@ public class Calculatrice {
 	}
 
 
+//---------------------------------------------------------
+	
+	
 	//méthodes
 	/**
 	 * Additionne un nombre Ã  la valeur courante
@@ -84,7 +87,7 @@ public class Calculatrice {
 	
 
 	/**
-	 * Renvoie une representation textuelle de la valmeur affichée sur la calculatrice
+	 * Renvoie une representation textuelle de la valeur affichée sur la calculatrice
 	 */
 	@Override
 	public String toString() {
