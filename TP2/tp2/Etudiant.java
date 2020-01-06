@@ -1,21 +1,33 @@
+/**
+ * 
+ */
 package tp2;
 
-
 /**
- * Classe permettant la représentation d'un étudiant
- * @author Virginie Van den Schrieck
+ * @author sebastien
+ *
  */
 public class Etudiant {
-	//Variables d'instance
-	String nom;
-	String prenom;
-	int matricule;
-	//Cette variable d'instance est du type Date, disponible dans le même package
-	Date dateNaissance;
+
+	//------------------------------------variables
+	private String nom;
+	private String prenom;
+	private int matricule;
+	private Date dateNaissance;
 	
 	
+	//----------------------------------------------constructeurs
+	/**
+	 * 
+	 */
+	public Etudiant() {
+		this.setNom("Fantuzz");
+		this.setPrenom("S�bastien");
+		this.setMatricule(201693);
+		this.setDateNaissance(new Date());
+	}
 	
-	//constructeur
+	
 	/**
 	 * @param nom
 	 * @param prenom
@@ -23,32 +35,118 @@ public class Etudiant {
 	 * @param dateNaissance
 	 */
 	public Etudiant(String nom, String prenom, int matricule, Date dateNaissance) {
-		super();
-		this.nom = nom;
-		this.prenom = prenom;
-		this.matricule = matricule;
-		this.dateNaissance = dateNaissance;
+		this.setNom(nom);
+		this.setPrenom(prenom);
+		this.setMatricule(matricule);
+		this.setDateNaissance(dateNaissance);
+	}
+
+	
+	//---------------------------------------------------------setters/getters
+	/**
+	 * @return the nom
+	 */
+	public String getNom() {
+		return nom;
 	}
 
 
+	/**
+	 * @param nom the nom to set
+	 */
+	public void setNom(String nom) {
+		this.nom = nom;
+	}
+
+
+	/**
+	 * @return the prenom
+	 */
+	public String getPrenom() {
+		return prenom;
+	}
+
+
+	/**
+	 * @param prenom the prenom to set
+	 */
+	public void setPrenom(String prenom) {
+		this.prenom = prenom;
+	}
+
+
+	/**
+	 * @return the matricule
+	 */
+	public int getMatricule() {
+		return matricule;
+	}
+
+
+	/**
+	 * @param matricule the matricule to set
+	 */
+	public void setMatricule(int matricule) {
+		this.matricule = matricule;
+	}
+
+
+	/**
+	 * @return the dateNaissance
+	 */
+	public Date getDateNaissance() {
+		return dateNaissance;
+	}
+
+
+	/**
+	 * @param dateNaissance the dateNaissance to set
+	 */
+	public void setDateNaissance(Date dateNaissance) {
+		this.dateNaissance = dateNaissance;
+	}
+
+	
+	//-----------------------------------------------------methode
+	@Override
+	public String toString() {
+		return "Etudiant [nom=" + nom + ", prenom=" + prenom + ", matricule=" + matricule + ", dateNaissance="
+				+ dateNaissance + "]";
+	}
+
+	
+	//------------------------------------------------------main
+	/**
+	 * Version 1
+	 * @param args
+	 */
+	/*public static void main(String[] args) {
+		Etudiant etu1 = new Etudiant();
+		System.out.println(etu1.nom);
+		System.out.println(etu1.prenom);
+		System.out.println(etu1.matricule);
+		System.out.println(etu1.dateNaissance.getJour());
+		System.out.println(etu1.dateNaissance.getMois());
+		System.out.println(etu1.dateNaissance.getAnnee());
+		System.out.println(etu1);
+
+	}*/
 
 
 
-	/*
-	 * Méthode main qui crée un étudiant et initialise les variables d'instance au départ de la ligne de commande
-	 * 
+	/**
+	 * Version 2
+	 * @param args
 	 */
 	public static void main(String[] args) {
-		Etudiant etu = new Etudiant();
-		etu.nom = args[0];
-		etu.prenom = args[1];
-		etu.matricule = Integer.parseInt(args[2]);
-		etu.dateNaissance = new Date();
-		etu.dateNaissance.jour = Integer.parseInt(args[3]);
-		etu.dateNaissance.mois = Integer.parseInt(args[4]);
-		etu.dateNaissance.annee = Integer.parseInt(args[5]);
-		System.out.println("Ca marche!");
-		
+		Etudiant etu1 = new Etudiant("Fantuzzi", "Sebastien", 201693, new Date(6, 12, 1999));
+		/*System.out.println(etu1.nom);
+		System.out.println(etu1.prenom);
+		System.out.println(etu1.matricule);
+		System.out.println(etu1.dateNaissance.getJour());
+		System.out.println(etu1.dateNaissance.getMois());
+		System.out.println(etu1.dateNaissance.getAnnee());*/
+		System.out.println(etu1);
 	}
 
 }

@@ -1,33 +1,55 @@
+/**
+ * 
+ */
 package tp1;
 
-
 /**
- * Classe permettant la représentation d'un étudiant
- * @author Virginie Van den Schrieck
+ * @author sebastien
+ *
  */
 public class Etudiant {
-	//Variables d'instance
+
+	
 	String nom;
 	String prenom;
 	int matricule;
-	//Cette variable d'instance est du type Date, disponible dans le même package
 	Date dateNaissance;
 	
-	/*
-	 * Méthode main qui crée un étudiant et initialise les variables d'instance au départ de la ligne de commande
-	 * 
+	
+	/**
+	 * Version 1
+	 * @param args
+	 */
+	/*public static void main(String[] args) {
+		/*Etudiant etu1 = new Etudiant();
+		etu1.prenom = "S�bastien";
+		etu1.nom = "Fantuzzi";
+		etu1.matricule = 201693;
+		System.out.println(etu1.nom);
+		System.out.println(etu1.prenom);
+		System.out.println(etu1.matricule);
+
+	}*/
+	
+	/**
+	 * Version 2
+	 * @param args
 	 */
 	public static void main(String[] args) {
-		Etudiant etu = new Etudiant();
-		etu.nom = args[0];
-		etu.prenom = args[1];
-		etu.matricule = Integer.parseInt(args[2]);
-		etu.dateNaissance = new Date();
-		etu.dateNaissance.jour = Integer.parseInt(args[3]);
-		etu.dateNaissance.mois = Integer.parseInt(args[4]);
-		etu.dateNaissance.annee = Integer.parseInt(args[5]);
-		System.out.println("Ca marche!");
-		
+		Etudiant etu1 = new Etudiant();
+		etu1.nom = args[0];
+		etu1.prenom= args[1];
+		etu1.matricule = Integer.parseInt(args[2]);
+		System.out.println(etu1.nom);
+		System.out.println(etu1.prenom);
+		System.out.println(etu1.matricule);
+		etu1.dateNaissance = new Date();
+		etu1.dateNaissance.jour = Integer.parseInt(args[3]);
+		etu1.dateNaissance.mois = Integer.parseInt(args[4]);
+		etu1.dateNaissance.annee = Integer.parseInt(args[5]);
+		System.out.println(etu1.dateNaissance.jour);
+		System.out.println(etu1.dateNaissance.mois);
+		System.out.println(etu1.dateNaissance.annee);
 	}
 
 }
